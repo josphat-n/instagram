@@ -8,4 +8,5 @@ urlpatterns = [
     path('',include('insta.urls')),
     path('accounts/', include('registration.backends.simple.urls')),
     path('login/', LoginView.as_view(template_name= '/'), name='user_login'),
+    path('logout/', LogoutView.as_view(template_name='/'), name="user_logout"),
 ]
