@@ -27,3 +27,8 @@ class Image(models.Model):
       imgs = Image.objects.all()
       return imgs  
    
+   def save_image(self):
+      """
+      Save a new image to the database    
+      """
+      self.save()
