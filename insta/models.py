@@ -32,3 +32,15 @@ class Image(models.Model):
       Save a new image to the database    
       """
       self.save()
+      
+   def delete_image(self):
+      """
+      function to delete an image from the db
+      """
+      self.delete()  
+   
+   def update_image(self):
+      """
+      function to update the caption of an image
+      """
+      self.image_caption.update()        

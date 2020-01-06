@@ -17,3 +17,20 @@ class ImageTestClass(TestCase):
       self.image_one.save_image()
       imgs = Image.objects.all()
       self.assertTrue(len(imgs) > 0)    
+   
+   # Teardown Method
+   def tearDown(self):
+      Image.objects.all().delete()    
+   
+   #Delete Method   
+   def test_delete(self):
+      self.image_one.save_image()    
+      self.image_one.delete_image()
+      imgs=Image.objects.all()
+      self.assertTrue(len(imgs)<1)    
+      
+   #Update Method
+   def test_update(self):
+      self.image_one.save_image()
+      self.image_one.image_caption.update()
+          
