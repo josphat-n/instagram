@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http  import HttpResponse
 from .forms import ImageUploadForm
 
@@ -6,15 +6,16 @@ from .forms import ImageUploadForm
 def home(request):
    return render(request, 'insta/home.html')
 
+@login_required(login_url='/accounts/login/')
 def new_image(request):
    current_user = request.user
    if request.method == 'POST':
       form = ImageUploadForm(request.POST, request.FILES)
       if form.is_valid():
          image = form.save(commit=False)
-         image_profile_id = current_user.id
+         
          image.save()
-      return redirect('home')
+      return redirect('instagram-home')
 
    else:
       form = ImageUploadForm()

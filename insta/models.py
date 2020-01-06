@@ -12,9 +12,11 @@ class Image(models.Model):
    image_name = models.CharField(max_length =30)
    image_image = ImageField(blank=True, manual_crop="")
    image_caption = models.TextField()
-   image_profile = models.ForeignKey(Profile, on_delete=models.CASCADE,)
+   image_profile = models.ForeignKey(Profile, on_delete=models.CASCADE, default = 1)
    image_likes = models.IntegerField(default = 0)
    image_comments = models.TextField(blank = True)   
    
    def __str__(self):
       return self.image_name
+   
+   
