@@ -12,7 +12,7 @@ def new_image(request):
       form = ImageUploadForm(request.POST, request.FILES)
       if form.is_valid():
          image = form.save(commit=False)
-         
+         image_profile_id = current_user.id
          image.save()
       return redirect('home')
 
