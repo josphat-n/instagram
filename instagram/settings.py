@@ -40,7 +40,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -55,7 +54,7 @@ TEMPLATES = [
 
 UPLOADCARE = {
     'pub_key': '33e7c20cc8a66d8c6351',
-    'secret': 's9b1b55b66177f5a2cb6d',
+    'secret': '9b1b55b66177f5a2cb6d',
 }
 
 WSGI_APPLICATION = 'instagram.wsgi.application'
