@@ -19,4 +19,11 @@ class Image(models.Model):
    def __str__(self):
       return self.image_name
    
+   @classmethod
+   def get_all(cls):
+      """
+      This function allows for the fetching of all the image objects from the database
+      """
+      imgs = Image.objects.all()
+      return imgs  
    

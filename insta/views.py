@@ -1,10 +1,14 @@
 from django.shortcuts import render, redirect
 from django.http  import HttpResponse
 from .forms import ImageUploadForm
+from django.contrib.auth.decorators import login_required
+from .models import Image
 
 # Create your views here.
 def home(request):
-   return render(request, 'insta/home.html')
+   images = Image.get_all()   
+   
+   return render(request, 'insta/home.html', {'images':images})
 
 @login_required(login_url='/accounts/login/')
 def new_image(request):

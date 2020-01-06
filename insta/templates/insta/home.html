@@ -3,14 +3,30 @@
 {{ block.super}}
 
 <div class="container">
-   <div class="row">
-      <h1 class='text-center'>Welcome to Home!</h1>
-   </div>
-</div>
 
+  <div class="row">
+  <!--Display images  in a card-->
+  {% for img in images %}
+   <div class="img col-8">  
+    <div class="card h-100 border-0 shadow" id="vegetable">
+      <div class="card-img-top">
+        <div class="embed-responsive embed-responsive-4by3">
+          <div class="embed-responsive-item">
+            <img src="{{ img.image_image.cdn_url}}" alt="" class="img-fluid w-100" />
+          </div>
+          <hr>
+          <div class= "card-body">       
+            <button class="btn btn-primary">Add a comment</button>        
+          </div>           
+        </div>
+      </div>
+    </div>  
+  </div><!--End of col-3 -->
+  
+  {% empty %}
+  <div class="row">
+    <h2 class="text-center">You have no images yet</h2>
+  </div>
+  {% endfor %}
+  
 {% endblock %}
-
-
-
-
-
