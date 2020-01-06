@@ -8,6 +8,29 @@ class Profile(models.Model):
    profile_photo = ImageField(blank=True, manual_crop="") 
    bio = models.TextField()
    
+   def __str__(self):
+      return self.name
+   
+   @classmethod
+   def get_all(cls):
+      """
+      This function allows for the fetching of all the profile objects from the database
+      """
+      prof = Profile.objects.all()
+      return prof
+   
+   def save_profile(self):
+      """
+      Save a profile to the database    
+      """
+      self.save()   
+   
+   def delete_profile(self):
+      """
+      function to delete a profile from the db
+      """
+      self.delete()      
+   
 class Image(models.Model):
    image_name = models.CharField(max_length =30)
    image_image = ImageField(blank=True, manual_crop="")
