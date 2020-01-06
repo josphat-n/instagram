@@ -1,6 +1,9 @@
 # instagram
 
-This project was generated with [Python](https://www.python.org/) version 3.6.0 <br>
+This project was generated with [Python](https://www.python.org/) version 3.6.9 <br>
+
+## Live Link
+The app is hosted on heroku. To view the site Click [here](https://jn-instagram.herokuapp.com/)
 
 ## Project Description
   Instagram is a web app that mimicks the instagram app by Facebook Inc. This webapp allows users to view several photos posted by the author. The users also get click on an image and view an enlarged version of the photo, together with other details of the photo.<br>
@@ -37,7 +40,7 @@ Below are the steps to have the app running locally:
        
 ## Technologies Used
   This project framework and backend logic was generated with
-  * [Python](https://www.python.org/) version 3.6.0. 
+  * [Python](https://www.python.org/) version 3.6.9. 
   * [Django](https://docs.djangoproject.com/en/3.0/releases/2.1/).<br>
   * Postgress database
   Other django packages and dependencies such as:
