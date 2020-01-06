@@ -49,4 +49,4 @@ Below are the steps to have the app running locally:
 
 ### License
 * This project is licensed by [MIT &copy; License](LICENSE.txt)<br>
-  Copyright (c) Josephat Njoroge 2019.
+  Copyright (c) Josephat Njoroge 2020.
